@@ -47,6 +47,13 @@ public class PasswordTest {
     
     }
      @Test 
-    public void prueba() {
+    public void coincidirContraseñas() {
+         String password = "Moran@88";
+        String confirmPassword = "Moran@89";
+        try {
+            mypassword.validatePassword(password, confirmPassword);
+        } catch (Exception e) {
+            // TODO: handle exception
+            assertEquals("Las contraseñas no coinciden.", e.getMessage());
     }
 }
